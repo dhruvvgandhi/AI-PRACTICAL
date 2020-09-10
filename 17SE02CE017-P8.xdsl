@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Age">
+			<state id="Below20" />
+			<state id="Below30" />
+			<state id="Below50" />
+			<state id="Above50" />
+			<probabilities>0.1 0.2 0.3 0.4</probabilities>
+		</cpt>
+		<cpt id="Gender">
+			<state id="Male" />
+			<state id="Female" />
+			<probabilities>0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="Smoking">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Gender Age</parents>
+			<probabilities>0.6 0.4 0.7 0.3 0.8 0.2 0.9 0.1 0.4 0.6 0.5 0.5 0.6 0.4 0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="Exposuretotoxics">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Age</parents>
+			<probabilities>0.7 0.3 0.2 0.8 0.7 0.3 0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="Cancer">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Exposuretotoxics Smoking</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="SerumCalcium">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Cancer</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="LungTumor">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>Cancer</parents>
+			<probabilities>0.8 0.2 0.3 0.7</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only" name="Network1">
+			<node id="Age">
+				<name>Age</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>149 47 190 72</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="Gender">
+				<name>Gender</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>322 39 374 71</position>
+				<barchart active="true" width="128" height="87" />
+			</node>
+			<node id="Smoking">
+				<name>Smoking</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>297 214 391 249</position>
+				<barchart active="true" width="128" height="77" />
+			</node>
+			<node id="Exposuretotoxics">
+				<name>Exposuretotoxics</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>87 218 261 248</position>
+				<barchart active="true" width="128" height="74" />
+			</node>
+			<node id="Cancer">
+				<name>Cancer</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>220 340 271 371</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="SerumCalcium">
+				<name>SerumCalcium</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>144 504 224 554</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="LungTumor">
+				<name>LungTumor</name>
+				<interior color="00ff00" />
+				<outline color="333333" width="2" />
+				<font color="000000" name="Arial" size="8" bold="true" italic="true" />
+				<position>286 508 354 550</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
